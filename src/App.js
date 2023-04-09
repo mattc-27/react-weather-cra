@@ -25,7 +25,7 @@ function App() {
 
   const getWeatherData = async () => {
     const formattedWeather = await fetch(
-      `http://api.weatherapi.com/v1/forecast.json?key=7fc3d200184742b4a2f203717231103&q=${query.q}`)
+      `http://api.weatherapi.com/v1/forecast.json?key=API_KEY&q=${query.q}`)
       .then((response) => response.json())
       .then(formatWeather);
     return { ...formattedWeather };
